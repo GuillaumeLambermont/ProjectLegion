@@ -2,13 +2,13 @@
 FROM eclipse-temurin:21-jre-alpine
 
 # Set the working directory in the container
-WORKDIR /ProjectLegion
+WORKDIR /projectlegion
 
 # Copy the packaged JAR file from the target directory (Maven build)
-COPY target/*.jar ProjectLegion.jar
+COPY target/*.jar projectlegion.jar
 
 # Expose the port your application listens on (if applicable)
 EXPOSE 8080
 
 # Command to run the application
-CMD ["java", "-jar", "ProjectLegion.jar"]
+ENTRYPOINT ["java", "-jar", "projectlegion.jar"]
