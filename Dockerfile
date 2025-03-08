@@ -5,7 +5,7 @@ FROM eclipse-temurin:21-jre-alpine
 WORKDIR /app
 
 # Copy the packaged JAR file from the target directory (Maven build)
-COPY target/*.jar app.jar
+COPY target/*.jar ProjectLegion.jar
 
 # Expose the port your application listens on (if applicable)
 EXPOSE 8080 # Replace 8080 with your application's port
