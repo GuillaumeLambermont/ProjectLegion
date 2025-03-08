@@ -12,4 +12,12 @@ public class PlayerService {
     private PlayerRepository playerRepository;
 
     public List<Player> getAllPlayers() { return playerRepository.findAll(); }
+
+    public Player createPlayer(Player player) {
+        return playerRepository.save(player);
+    }
+
+    public Player getPlayerById(Long id) {
+        return playerRepository.findById(id).orElse(null);
+    }
 }
