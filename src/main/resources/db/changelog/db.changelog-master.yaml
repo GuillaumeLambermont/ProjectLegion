@@ -11,3 +11,6 @@ databaseChangeLog:
   - include:
       file: db/changelog/changes/populate-players-table.yaml
       relativeToChangelogFile: false
+  - include:
+      file: db/changelog/changes/populate-resources-table.yaml
+      relativeToChangelogFile: false
