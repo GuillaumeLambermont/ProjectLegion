@@ -2,3 +2,12 @@ databaseChangeLog:
   - include:
       file: db/changelog/changes/initial-schema.yaml
       relativeToChangelogFile: false
+  - include:
+      file: db/changelog/changes/create-resources-table.yaml
+      relativeToChangelogFile: false
+  - include:
+      file: db/changelog/changes/create-buildings-table.yaml
+      relativeToChangelogFile: false
+  - include:
+      file: db/changelog/changes/populate-players-table.yaml
+      relativeToChangelogFile: false

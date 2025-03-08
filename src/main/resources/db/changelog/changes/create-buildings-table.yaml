@@ -1,0 +1,59 @@
+databaseChangeLog:
+    - changeSet:
+        id: 2
+        author: guillaume
+        changes:
+            - createTable:
+                tableName: player_buildings
+                columns:
+                    - column:
+                        name: id
+                        type: bigint
+                        autoIncrement: true
+                        constraints:
+                            primaryKey: true
+                            nullable: false
+                    - column:
+                        name: player_id
+                        type: bigint
+                        constraints:
+                            nullable: false
+                            foreignKey:
+                                name: fk_player_buildings_players_id
+                                referencesTableName: players(id)
+                    - column:
+                        name: mill_level
+                        type: integer
+                    - column:
+                        name: mill_capacity
+                        type: integer
+                    - column:
+                        name: mill_production
+                        type: integer
+                    - column:
+                        name: lumberjack_level
+                        type: integer
+                    - column:
+                        name: lumberjack_capacity
+                        type: integer
+                    - column:
+                        name: lumberjack_production
+                        type: integer
+                    - column:
+                        name: quarry_level
+                        type: integer
+                    - column:
+                        name: quarry_capacity
+                        type: integer
+                    - column:
+                        name: quarry_production
+                        type: integer
+                    - column:
+                        name: iron_mine_level
+                        type: integer
+                    - column:
+                        name: iron_mine_capacity
+                        type: integer
+                    - column:
+                        name: iron_mine_production
+                        type: integer

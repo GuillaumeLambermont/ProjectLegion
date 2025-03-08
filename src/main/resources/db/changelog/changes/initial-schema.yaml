@@ -1,10 +1,10 @@
 databaseChangeLog:
   - changeSet:
-      id: 1
-      author: your-name
+      id: players_table
+      author: guillaume
       changes:
         - createTable:
-            tableName: users
+            tableName: players
             columns:
               - column:
                   name: id
@@ -15,10 +15,11 @@ databaseChangeLog:
                     nullable: false
               - column:
                   name: username
-                  type: varchar(50)
+                  type: varchar(255)
                   constraints:
                     nullable: false
-                    unique: true
               - column:
                   name: email
-                  type: varchar(100)
+                  type: varchar(255)
+                  constraints:
+                    nullable: false

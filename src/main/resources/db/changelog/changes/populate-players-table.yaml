@@ -1,0 +1,41 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-initial-players-data
+      author: guillaume
+      changes:
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: username
+                  value: JohnDoe
+              - column:
+                  name: email
+                  value: johndoe@email.com
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: username
+                  value: JaneDoe
+              - column:
+                  name: email
+                  value: janedoe@email.com
+        - insert:
+            tableName: players
+            columns:
+              - column:
+                  name: id
+                  value: 3
+              - column:
+                  name: username
+                  value: Francis
+              - column:
+                  name: email
+                  value: francis@email.com

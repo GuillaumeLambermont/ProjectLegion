@@ -1,0 +1,34 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-player-resources-table
+      author: guillaume
+      changes:
+        - createTable:
+            tableName: player_resources
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: player_id
+                  type: bigint
+                  constraints:
+                    nullable: false
+                    foreignKeyName: fk_player_resources_players_id
+                    referencesTableName: players(id)
+              - column:
+                  name: player_food
+                  type: FLOAT
+              - column:
+                  name: player_wood
+                  type: FLOAT
+              - column:
+                  name: player_stone
+                  type: FLOAT
+              - column:
+                  name: player_iron
+                  type: FLOAT

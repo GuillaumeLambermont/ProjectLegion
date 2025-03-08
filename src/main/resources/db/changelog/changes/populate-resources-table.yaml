@@ -1,0 +1,26 @@
+databaseChangeLog:
+    - changeSet:
+        id: populate-player-resources-table
+        author: guillaume
+        changes:
+          - insert:
+              tableName: player_resources
+              columns:
+                - column:
+                    name: id
+                    value: 1
+                - column:
+                    name: player_id
+                    value: 1
+                - column:
+                    name: player_food
+                    value: 100
+                - column:
+                    name: player_wood
+                    value: 101
+                - column:
+                    name: player_stone
+                    value: 102
+                - column:
+                    name: player_iron
+                    value: 103

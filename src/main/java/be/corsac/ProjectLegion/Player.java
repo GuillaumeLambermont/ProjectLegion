@@ -3,8 +3,8 @@ package be.corsac.ProjectLegion;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "users")
-public class User {
+@Table(name = "players")
+public class Player {
 
     @Id
     @GeneratedValue
@@ -16,8 +16,8 @@ public class User {
     @Column(name = "email")
     private String email;
 
-    public User() {}
-    public User(Long id, String username, String email) {
+    public Player() {}
+    public Player(Long id, String username, String email) {
         this.id = id;
         this.username = username;
         this.email = email;
