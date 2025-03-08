@@ -1,5 +1,13 @@
 databaseChangeLog:
   - changeSet:
+      id: create-players-sequence
+      author: guillaume
+      changes:
+        - createSequence:
+            sequenceName: players_seq
+            incrementBy: 1
+            startValue: 1
+  - changeSet:
       id: players_table
       author: guillaume
       changes:
@@ -9,7 +17,7 @@ databaseChangeLog:
               - column:
                   name: id
                   type: bigint
-                  autoIncrement: true
+                  defaultValueSequenceNext: players_seq
                   constraints:
                     primaryKey: true
                     nullable: false
