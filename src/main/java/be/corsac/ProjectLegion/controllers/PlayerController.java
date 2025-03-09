@@ -1,5 +1,10 @@
-package be.corsac.ProjectLegion;
+package be.corsac.ProjectLegion.controllers;
 
+import be.corsac.ProjectLegion.models.player.Player;
+import be.corsac.ProjectLegion.models.player.playerDTOs.CreatePlayerDTO;
+import be.corsac.ProjectLegion.models.player.playerDTOs.PlayerDTO;
+import be.corsac.ProjectLegion.models.player.playerDTOs.PlayerIdDTO;
+import be.corsac.ProjectLegion.services.PlayerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -23,5 +28,9 @@ public class PlayerController {
 
     @PostMapping(consumes = "application/json", produces = "application/json")
     @ResponseStatus(HttpStatus.CREATED)
-    public Player createPlayer(@RequestBody Player player) { return playerService.createPlayer(player); }
+    public PlayerDTO createPlayer(@RequestBody CreatePlayerDTO createPlayerDTO) { return playerService.createPlayer(createPlayerDTO); }
+
+    @DeleteMapping(value = "/{id}", produces = "application/json")
+    public PlayerIdDTO deletePlayer(@PathVariable Long id) {
+        return playerService.deletePlayer(id); }
 }

@@ -1,4 +1,4 @@
-package be.corsac.ProjectLegion;
+package be.corsac.ProjectLegion.models.player;
 
 import jakarta.persistence.*;
 
@@ -18,8 +18,7 @@ public class Player {
     private String email;
 
     public Player() {}
-    public Player(Long id, String username, String email) {
-        this.id = id;
+    public Player(String username, String email) {
         this.username = username;
         this.email = email;
     }
