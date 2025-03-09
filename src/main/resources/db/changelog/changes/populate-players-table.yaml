@@ -8,7 +8,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  value: 1
+                  valueComputed: nextval('players_seq')
               - column:
                   name: username
                   value: JohnDoe
@@ -20,7 +20,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  value: 2
+                  valueComputed: nextval('players_seq')
               - column:
                   name: username
                   value: JaneDoe
@@ -32,7 +32,7 @@ databaseChangeLog:
             columns:
               - column:
                   name: id
-                  value: 3
+                  valueComputed: nextval('players_seq')
               - column:
                   name: username
                   value: Francis
